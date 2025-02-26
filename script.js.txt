@@ -1,3 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
-    alert("Selamat datang di website saya!");
+    const welcomeMessage = "Selamat datang di website saya!";
+    showAlert(welcomeMessage);
+    setupButtonListener();
 });
+
+function showAlert(message) {
+    alert(message);
+}
+
+function setupButtonListener() {
+    const button = document.createElement("button");
+    button.textContent = "Klik Saya";
+    button.style.display = "block";
+    button.style.margin = "20px auto";
+    document.body.appendChild(button);
+    
+    button.addEventListener("click", function () {
+        alert("Tombol telah diklik!");
+    });
+}
